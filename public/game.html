@@ -4,11 +4,138 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Game</title>
-    <link rel="stylesheet" href="../dist/output.css" />
+    <title>Workshop</title>
+    <link rel="stylesheet" href="input.css" />
   </head>
-  <body>
-    <div>Game</div>
+  <body class="overflow-hidden">
+    <div class="absolute top-0 bottom-0 left-0 right-0">
+      <canvas id="canvas" style="width: 100%; height: 100%"></canvas>
+    </div>
+
+    <div
+      class="absolute top-0 right-0 left-0 bottom-0 bg-slate-900/70 overflow-auto pb-24 px-12"
+    >
+      <div class="flex justify-around items-center h-20">
+        <button
+          id="back-button"
+          class="opacity-0 mr-auto flex bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 focus:outline-none text-white text-lg uppercase font-bold shadow-md rounded-sm px-5 py-1"
+        >
+          Back
+        </button>
+        <a href="/"><img class="h-14 w-14" src="./assets/omtm_logo.png" /></a>
+        <button
+          id="next-button"
+          class="opacity-0 ml-auto flex bg-gradient-to-r from-pink-500 to-purple-500 hover:from-pink-600 hover:to-purple-600 focus:outline-none text-white text-lg uppercase font-bold shadow-md rounded-sm px-5 py-1"
+        >
+          Next
+        </button>
+      </div>
+      <div class="p-6">
+        <div class="text-6xl font-bold text-blue-500 mb-3">
+          WHAT ARE YOUR VALUES?
+        </div>
+        <div class="text-justify text-white text-lg">
+          <span class="font-medium">Below are 10 values spaces</span>, we’d like
+          you to pick your <span class="underline">top 3 values</span> in
+          relation to how you live your life & then describe how you live them…
+          Start with three One Minute To Midnight chips. Please click on a green
+          chip and drag it onto your chosen value. Choose one chip per value. Is
+          there a value you reject? Drag the red chip onto this card.
+        </div>
+      </div>
+      <div style="grid-template-columns: 2fr 1fr" class="grid">
+        <div class="flex flex-wrap">
+          <img
+            class="h-60 w-60"
+            src="./assets/valueCards/creative_different_imaginative.png"
+          />
+          <img
+            class="h-60 w-60"
+            src="./assets/valueCards/ethical_responsible_fair.png"
+          />
+          <img
+            class="h-60 w-60"
+            src="./assets/valueCards/traditional_respectful_modest.png"
+          />
+          <img
+            class="h-60 w-60"
+            src="./assets/valueCards/ambitious_successfull_capable.png"
+          />
+          <img
+            class="h-60 w-60"
+            src="./assets/valueCards/polite_reserved_lay-abiding.png"
+          />
+          <img
+            class="h-60 w-60"
+            src="./assets/valueCards/powerful_influential_prestigious.png"
+          />
+          <img
+            class="h-60 w-60"
+            src="./assets/valueCards/exciting_adventurous_edgy.png"
+          />
+          <img
+            class="h-60 w-60"
+            src="./assets/valueCards/fun_indulgent_joyful.png"
+          />
+          <img
+            class="h-60 w-60"
+            src="./assets/valueCards/safe_dependable_secure.png"
+          />
+          <img
+            class="h-60 w-60"
+            src="./assets/valueCards/caring_honest_kind.png"
+          />
+
+          <div class="">
+            <img
+              data-chipname="angryOne"
+              class="w-15 h-15 draggable"
+              src="./assets/angryFace.png"
+            />
+            <img
+              data-chipname="happyOne"
+              class="w-15 h-15 draggable"
+              src="./assets/smileyFace.png"
+            />
+            <img
+              data-chipname="happyTwo"
+              class="w-15 h-15 draggable"
+              src="./assets/smileyFace.png"
+            />
+            <img
+              data-chipname="happyThree"
+              class="w-15 h-15 draggable"
+              src="./assets/smileyFace.png"
+            />
+          </div>
+        </div>
+        <div
+          class="flex flex-col border border-white rounded-3xl border-2 text-white p-3"
+        >
+          <div class="text-lg">
+            Please tell us why these 3 values are important to you and how
+            you’ve lived them in the last month (be as specific as possible)?
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div
+      class="fixed grid grid-cols-3 justify-evenly bottom-0 left-0 right-0 bg-zinc-600/75 h-10 px-5"
+    >
+      <div></div>
+      <div class="flex justify-center items-center">
+        <div id="tagLineElement" class="text-pink-700 font-medium capitalize">
+          Where do your values sit?
+        </div>
+      </div>
+      <div class="flex justify-end items-center gap-1">
+        <div class="font-extrabold text-pink-600">ONE MINUTE</div>
+        <div class="font-extrabold text-blue-300">TO MIDNIGHT</div>
+      </div>
+    </div>
+
     <script defer="defer" src="game.bundle.js"></script>
   </body>
 </html>
